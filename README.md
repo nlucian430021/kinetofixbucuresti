@@ -1,0 +1,2 @@
+# kinetofixbucuresti
+miscarea potrivita
