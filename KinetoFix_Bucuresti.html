@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KinetoFix București — Kinetoterapie & Recuperare Fizică</title>
+  <meta name="description" content="Cabinet de kinetoterapie și recuperare fizică în București, Sectorul 3. Terapeut Lucian Nae — plan personalizat 1 la 1 pentru sportivi, bebeluși, birou și recuperare post-traumatică." />
+  <meta name="keywords" content="kinetoterapie bucuresti, recuperare fizica, masaj terapeutic, kinetoterapie sector 3, kineto fix bucuresti" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Nunito', sans-serif; background: #fff; color: #1a1a2e; overflow-x: hidden; }
+    h1,h2,h3,h4,h5 { font-family: 'Raleway', sans-serif; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* Utilities */
+    .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+    .gradient-brand { background: linear-gradient(135deg, #7c3aed, #9333ea, #c026d3, #db2777); }
+    .gradient-brand-text { background: linear-gradient(135deg, #7c3aed, #c026d3, #db2777); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .section-divider { height: 3px; background: linear-gradient(90deg, #7c3aed, #db2777); border-radius: 2px; }
+    .glass-card { background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.25); }
+    .btn-whatsapp { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; border-radius: 9999px; color: #fff; font-weight: 800; font-family: 'Raleway', sans-serif; background: linear-gradient(135deg, #25D366, #128C7E); transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 8px 24px rgba(37,211,102,0.35); cursor: pointer; border: none; font-size: 1rem; }
+    .btn-whatsapp:hover { transform: scale(1.05); box-shadow: 0 12px 32px rgba(37,211,102,0.5); }
+    .btn-outline { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; border-radius: 9999px; color: #fff; font-weight: 800; font-family: 'Raleway', sans-serif; background: transparent; border: 2px solid rgba(255,255,255,0.4); transition: background 0.2s; cursor: pointer; font-size: 1rem; }
+    .btn-outline:hover { background: rgba(255,255,255,0.15); }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 1.75rem; border-radius: 9999px; color: #fff; font-weight: 800; font-family: 'Raleway', sans-serif; transition: opacity 0.2s, transform 0.2s; cursor: pointer; border: none; font-size: 0.9rem; }
+    .btn-primary:hover { opacity: 0.9; transform: scale(1.02); }
+
+    /* Navbar */
+    #navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; transition: background 0.3s, box-shadow 0.3s; }
+    #navbar.scrolled { background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); box-shadow: 0 2px 20px rgba(124,58,237,0.1); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 56px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.875rem; color: rgba(255,255,255,0.9); transition: color 0.2s; }
+    #navbar.scrolled .nav-links a { color: #4c1d95; }
+    .nav-links a:hover { color: #e879f9; }
+    #navbar.scrolled .nav-links a:hover { color: #7c3aed; }
+    .nav-cta { padding: 0.6rem 1.4rem; border-radius: 9999px; font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 0.85rem; color: #fff; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.9; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: background 0.3s; }
+    #navbar.scrolled .hamburger span { background: #7c3aed; }
+    .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 999; background: rgba(124,58,237,0.97); backdrop-filter: blur(12px); flex-direction: column; align-items: center; justify-content: center; gap: 2rem; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 1.5rem; color: #fff; }
+    .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; }
+
+    /* Hero */
+    #acasa { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(46,16,101,0.88), rgba(76,29,149,0.72), rgba(107,33,168,0.4)); }
+    .hero-overlay2 { position: absolute; inset: 0; background: linear-gradient(to top, rgba(46,16,101,0.65), transparent, transparent); }
+    .hero-content { position: relative; z-index: 10; padding-top: 5rem; max-width: 800px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: 9999px; background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.25); color: #fff; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem; }
+    .hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #f472b6; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.7;transform:scale(1.2)} }
+    .hero-h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 1rem; }
+    .hero-h1 .accent { background: linear-gradient(90deg, #e879f9, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-sub { font-size: 1.125rem; color: rgba(255,255,255,0.85); margin-bottom: 2rem; max-width: 560px; line-height: 1.7; }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; }
+    .hero-stats { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+    .stat-item { display: flex; align-items: center; gap: 0.75rem; }
+    .stat-icon { width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; }
+    .stat-val { font-size: 1.25rem; font-weight: 900; color: #fff; font-family: 'Raleway', sans-serif; }
+    .stat-lbl { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+    .scroll-hint { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 4px; color: rgba(255,255,255,0.6); font-size: 0.75rem; }
+    .bounce { animation: bounce 1.5s infinite; }
+    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }
+
+    /* Sections common */
+    .section-header { text-align: center; margin-bottom: 4rem; }
+    .section-tag { display: inline-block; padding: 0.375rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; color: #7c3aed; background: #ede9fe; margin-bottom: 1rem; font-family: 'Raleway', sans-serif; }
+    .section-title { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 900; color: #111827; margin-bottom: 1rem; }
+    .section-sub { color: #6b7280; font-size: 1.05rem; max-width: 540px; margin: 0 auto; }
+
+    /* Services */
+    #servicii { padding: 5rem 0; background: linear-gradient(to bottom, #faf5ff, #fff); }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .service-card { border-radius: 1.5rem; overflow: hidden; box-shadow: 0 4px 24px rgba(124,58,237,0.1); transition: transform 0.3s, box-shadow 0.3s; background: #fff; }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(124,58,237,0.2); }
+    .service-img { position: relative; height: 220px; overflow: hidden; }
+    .service-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s; }
+    .service-card:hover .service-img img { transform: scale(1.08); }
+    .service-overlay { position: absolute; inset: 0; opacity: 0.6; }
+    .service-tag { position: absolute; top: 1rem; left: 1rem; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; color: #fff; background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.3); }
+    .service-body { padding: 1.5rem; }
+    .service-body h3 { font-size: 1.125rem; font-weight: 900; color: #111827; margin-bottom: 0.5rem; }
+    .service-body p { font-size: 0.875rem; color: #6b7280; line-height: 1.6; margin-bottom: 1rem; }
+    .service-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-bottom: 1rem; }
+    .service-tags span { padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.7rem; font-weight: 700; color: #7c3aed; background: #ede9fe; }
+    .services-cta { text-align: center; margin-top: 3rem; }
+
+    /* About */
+    #despre { padding: 5rem 0; background: #fff; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .about-img-wrap { position: relative; border-radius: 1.5rem; overflow: hidden; box-shadow: 0 20px 60px rgba(124,58,237,0.2); }
+    .about-img-wrap img { width: 100%; height: 500px; object-fit: cover; }
+    .about-img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(46,16,101,0.6), transparent); }
+    .about-badge { position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.25); border-radius: 1rem; padding: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+    .about-avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #7c3aed, #db2777); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; font-size: 1.125rem; flex-shrink: 0; }
+    .about-badge-name { font-weight: 900; color: #fff; font-size: 0.875rem; font-family: 'Raleway', sans-serif; }
+    .about-badge-role { font-size: 0.75rem; color: #e879f9; font-weight: 600; }
+    .about-content h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 900; color: #111827; margin-bottom: 1rem; }
+    .about-content p { color: #6b7280; line-height: 1.7; margin-bottom: 1.5rem; }
+    .values-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
+    .value-card { padding: 1rem; border-radius: 1rem; background: #faf5ff; border: 1px solid #ede9fe; text-align: center; }
+    .value-icon { width: 40px; height: 40px; border-radius: 10px; background: linear-gradient(135deg, #7c3aed, #c026d3); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem; }
+    .value-icon svg { width: 20px; height: 20px; fill: none; stroke: #fff; stroke-width: 2; }
+    .value-card h4 { font-size: 0.8rem; font-weight: 900; color: #111827; margin-bottom: 0.25rem; }
+    .value-card p { font-size: 0.75rem; color: #6b7280; }
+    .specs-title { font-size: 0.75rem; font-weight: 900; color: #111827; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+    .specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+    .spec-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: #374151; }
+    .spec-dot { width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg, #7c3aed, #db2777); flex-shrink: 0; }
+
+    /* Pricing */
+    #preturi { padding: 5rem 0; background: #fff; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+    .pricing-card { border-radius: 1.5rem; overflow: hidden; box-shadow: 0 4px 24px rgba(124,58,237,0.1); transition: transform 0.3s; }
+    .pricing-card:hover { transform: translateY(-4px); }
+    .pricing-card.popular { transform: scale(1.04); box-shadow: 0 12px 48px rgba(124,58,237,0.3); }
+    .pricing-card.popular:hover { transform: scale(1.04) translateY(-4px); }
+    .pricing-header { padding: 2rem; }
+    .pricing-icon { width: 48px; height: 48px; border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .pricing-icon svg { width: 22px; height: 22px; fill: none; stroke: #fff; stroke-width: 2; }
+    .pricing-name { font-size: 1.25rem; font-weight: 900; margin-bottom: 0.25rem; }
+    .pricing-subtitle { font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem; }
+    .pricing-price { font-size: 2.5rem; font-weight: 900; font-family: 'Raleway', sans-serif; }
+    .pricing-unit { font-size: 0.875rem; font-weight: 600; }
+    .pricing-body { padding: 2rem; background: #fff; }
+    .pricing-features { list-style: none; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .pricing-features li { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.875rem; color: #374151; }
+    .check-icon { width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+    .check-icon svg { width: 11px; height: 11px; fill: none; stroke: #fff; stroke-width: 3; }
+    .pricing-cta { width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem; border-radius: 0.75rem; font-weight: 800; font-size: 0.875rem; font-family: 'Raleway', sans-serif; color: #fff; transition: opacity 0.2s, transform 0.2s; cursor: pointer; border: none; }
+    .pricing-cta:hover { opacity: 0.9; transform: scale(1.02); }
+    .special-table { max-width: 640px; margin: 0 auto; }
+    .special-table-inner { border-radius: 1rem; overflow: hidden; border: 1px solid #ede9fe; box-shadow: 0 4px 24px rgba(124,58,237,0.08); }
+    .special-row { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; }
+    .special-row:nth-child(even) { background: rgba(237,233,254,0.3); }
+    .special-row:not(:last-child) { border-bottom: 1px solid #ede9fe; }
+    .special-name { display: flex; align-items: center; gap: 0.75rem; font-size: 0.875rem; font-weight: 600; color: #374151; }
+    .special-dot { width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg, #7c3aed, #db2777); }
+    .special-price { font-weight: 900; color: #7c3aed; font-size: 0.875rem; font-family: 'Raleway', sans-serif; }
+    .pricing-note { text-align: center; font-size: 0.75rem; color: #9ca3af; margin-top: 1rem; }
+
+    /* Testimonials */
+    #testimoniale { padding: 5rem 0; background: linear-gradient(to bottom, #faf5ff, #fff); }
+    .rating-row { display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 3rem; }
+    .stars { display: flex; gap: 2px; }
+    .star { color: #f59e0b; font-size: 1.25rem; }
+    .rating-score { font-size: 1.25rem; font-weight: 900; color: #111827; font-family: 'Raleway', sans-serif; }
+    .rating-count { font-size: 0.875rem; color: #6b7280; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .testimonial-card { background: #fff; border-radius: 1.5rem; padding: 1.5rem; box-shadow: 0 4px 24px rgba(124,58,237,0.08); border: 1px solid #ede9fe; }
+    .test-stars { display: flex; gap: 2px; margin-bottom: 0.75rem; }
+    .test-text { font-size: 0.9rem; color: #374151; line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
+    .test-author { display: flex; align-items: center; gap: 0.75rem; }
+    .test-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #7c3aed, #db2777); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; font-size: 0.875rem; flex-shrink: 0; }
+    .test-name { font-weight: 800; color: #111827; font-size: 0.875rem; font-family: 'Raleway', sans-serif; }
+    .test-role { font-size: 0.75rem; color: #7c3aed; font-weight: 600; }
+    .test-cta { text-align: center; margin-top: 3rem; }
+
+    /* Blog */
+    #articole { padding: 5rem 0; background: #fff; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .blog-card { background: #fff; border-radius: 1.5rem; overflow: hidden; box-shadow: 0 4px 24px rgba(124,58,237,0.08); border: 1px solid #ede9fe; transition: transform 0.3s, box-shadow 0.3s; }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(124,58,237,0.15); }
+    .blog-img { position: relative; height: 200px; overflow: hidden; }
+    .blog-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .blog-card:hover .blog-img img { transform: scale(1.05); }
+    .blog-category { position: absolute; top: 1rem; left: 1rem; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.7rem; font-weight: 700; color: #fff; }
+    .blog-body { padding: 1.5rem; }
+    .blog-meta { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: #9ca3af; margin-bottom: 0.75rem; }
+    .blog-body h3 { font-size: 1rem; font-weight: 900; color: #111827; margin-bottom: 0.5rem; line-height: 1.4; }
+    .blog-body p { font-size: 0.85rem; color: #6b7280; line-height: 1.6; margin-bottom: 1rem; }
+    .blog-read { font-size: 0.8rem; font-weight: 700; color: #7c3aed; font-family: 'Raleway', sans-serif; display: flex; align-items: center; gap: 0.25rem; }
+
+    /* Gallery */
+    #galerie { padding: 5rem 0; background: linear-gradient(to bottom, #faf5ff, #fff); }
+    .gallery-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 2rem; }
+    .filter-btn { padding: 0.5rem 1.25rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; font-family: 'Raleway', sans-serif; border: 2px solid #ede9fe; background: #fff; color: #7c3aed; cursor: pointer; transition: all 0.2s; }
+    .filter-btn.active, .filter-btn:hover { background: linear-gradient(135deg, #7c3aed, #db2777); color: #fff; border-color: transparent; }
+    .gallery-grid { columns: 3; gap: 1rem; }
+    .gallery-item { break-inside: avoid; margin-bottom: 1rem; border-radius: 1rem; overflow: hidden; cursor: pointer; position: relative; }
+    .gallery-item img { width: 100%; display: block; transition: transform 0.5s; }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-item-overlay { position: absolute; inset: 0; background: rgba(124,58,237,0.5); opacity: 0; transition: opacity 0.3s; display: flex; align-items: center; justify-content: center; }
+    .gallery-item:hover .gallery-item-overlay { opacity: 1; }
+    .gallery-play { width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,0.9); display: flex; align-items: center; justify-content: center; }
+    .gallery-play svg { width: 24px; height: 24px; fill: #7c3aed; margin-left: 3px; }
+    .gallery-instagram-cta { text-align: center; margin-top: 2rem; }
+
+    /* Instagram */
+    #instagram { padding: 5rem 0; background: linear-gradient(135deg, #fdf4ff, #fce7f3); }
+    .instagram-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 2rem; }
+    .insta-item { aspect-ratio: 1; border-radius: 0.75rem; overflow: hidden; position: relative; cursor: pointer; }
+    .insta-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .insta-item:hover img { transform: scale(1.08); }
+    .insta-overlay { position: absolute; inset: 0; background: rgba(124,58,237,0.5); opacity: 0; transition: opacity 0.3s; display: flex; align-items: center; justify-content: center; }
+    .insta-item:hover .insta-overlay { opacity: 1; }
+    .insta-icon { color: #fff; }
+    .insta-cta { text-align: center; }
+    .btn-instagram { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; border-radius: 9999px; color: #fff; font-weight: 800; font-family: 'Raleway', sans-serif; background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); transition: opacity 0.2s, transform 0.2s; font-size: 1rem; }
+    .btn-instagram:hover { opacity: 0.9; transform: scale(1.03); }
+
+    /* Contact */
+    #contact { padding: 5rem 0; background: linear-gradient(to bottom, rgba(250,245,255,0.5), #fff); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+    .contact-info h3 { font-size: 1.5rem; font-weight: 900; color: #111827; margin-bottom: 0.5rem; }
+    .contact-info p { color: #6b7280; margin-bottom: 2rem; }
+    .contact-items { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
+    .contact-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; border-radius: 1rem; background: #faf5ff; border: 1px solid #ede9fe; }
+    .contact-item-icon { width: 40px; height: 40px; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-item-icon svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2; }
+    .contact-item-label { font-size: 0.75rem; color: #9ca3af; font-weight: 600; margin-bottom: 0.25rem; }
+    .contact-item-value { font-size: 0.9rem; font-weight: 800; color: #111827; font-family: 'Raleway', sans-serif; }
+    .contact-social { display: flex; gap: 0.75rem; }
+    .social-btn { width: 44px; height: 44px; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; transition: transform 0.2s; }
+    .social-btn:hover { transform: scale(1.1); }
+    .contact-form { background: #fff; border-radius: 1.5rem; padding: 2rem; box-shadow: 0 4px 24px rgba(124,58,237,0.1); border: 1px solid #ede9fe; }
+    .contact-form h3 { font-size: 1.25rem; font-weight: 900; color: #111827; margin-bottom: 0.5rem; }
+    .contact-form p { font-size: 0.875rem; color: #6b7280; margin-bottom: 1.5rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.8rem; font-weight: 700; color: #374151; margin-bottom: 0.375rem; font-family: 'Raleway', sans-serif; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem 1rem; border-radius: 0.75rem; border: 2px solid #ede9fe; font-family: 'Nunito', sans-serif; font-size: 0.9rem; color: #374151; transition: border-color 0.2s; outline: none; background: #fff; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #7c3aed; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-submit { width: 100%; padding: 1rem; border-radius: 0.75rem; font-weight: 800; font-size: 0.9rem; font-family: 'Raleway', sans-serif; color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; transition: opacity 0.2s, transform 0.2s; }
+    .form-submit:hover { opacity: 0.9; transform: scale(1.01); }
+    .map-container { height: 300px; border-radius: 1rem; overflow: hidden; margin-top: 1.5rem; border: 2px solid #ede9fe; }
+    .map-container iframe { width: 100%; height: 100%; border: none; }
+
+    /* Footer */
+    footer { background: #1a0533; padding: 4rem 0 1.5rem; color: rgba(255,255,255,0.8); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand img { height: 64px; margin-bottom: 1rem; }
+    .footer-brand p { font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.6); max-width: 280px; }
+    .footer-social { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
+    .footer-social a { width: 40px; height: 40px; border-radius: 0.75rem; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+    .footer-social a:hover { background: rgba(255,255,255,0.2); }
+    .footer-col h4 { font-size: 0.875rem; font-weight: 900; color: #fff; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-col ul li a { font-size: 0.875rem; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+    .footer-col ul li a:hover { color: #e879f9; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: gap; }
+    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+
+    /* WhatsApp Float */
+    .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; }
+    .whatsapp-float a { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #25D366, #128C7E); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 32px rgba(37,211,102,0.5); animation: float-pulse 2s infinite; }
+    @keyframes float-pulse { 0%,100%{box-shadow:0 8px 32px rgba(37,211,102,0.5)} 50%{box-shadow:0 8px 48px rgba(37,211,102,0.8)} }
+    .whatsapp-float svg { width: 30px; height: 30px; fill: #fff; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img-wrap img { height: 350px; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+      .pricing-card.popular { transform: none; }
+      .gallery-grid { columns: 2; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .specs-grid { grid-template-columns: 1fr; }
+      .instagram-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { columns: 1; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- WhatsApp Float -->
+<div class="whatsapp-float">
+  <a href="https://wa.me/40766410897?text=Bun%C4%83%20ziua%2C%20doresc%20o%20programare%20la%20KinetoFix%20Bucure%C8%99ti" target="_blank" rel="noopener noreferrer" title="Programează-te pe WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobileMenu()">✕</button>
+  <a href="#acasa" onclick="closeMobileMenu()">Acasă</a>
+  <a href="#servicii" onclick="closeMobileMenu()">Servicii</a>
+  <a href="#despre" onclick="closeMobileMenu()">Despre</a>
+  <a href="#preturi" onclick="closeMobileMenu()">Prețuri</a>
+  <a href="#galerie" onclick="closeMobileMenu()">Galerie</a>
+  <a href="#articole" onclick="closeMobileMenu()">Articole</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#acasa" class="nav-logo">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/kinetofix-logo_fba9468e.png" alt="KinetoFix București" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#acasa">Acasă</a></li>
+        <li><a href="#servicii">Servicii</a></li>
+        <li><a href="#despre">Despre</a></li>
+        <li><a href="#preturi">Prețuri</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#articole">Articole</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="https://wa.me/40766410897?text=Bun%C4%83%20ziua%2C%20doresc%20o%20programare" target="_blank" class="nav-cta gradient-brand">Programează-te</a>
+      <button class="hamburger" onclick="openMobileMenu()" aria-label="Meniu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="acasa">
+  <div class="hero-bg">
+    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/hero-kinetofix-Q7qpGmY2LCsuckhJyhBMV3.webp" alt="KinetoFix cabinet kinetoterapie București" loading="eager" />
+    <div class="hero-overlay"></div>
+    <div class="hero-overlay2"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        București, Sectorul 3 — Cabinet de Kinetoterapie
+      </div>
+      <h1 class="hero-h1">
+        Mișcarea Potrivită<br />
+        <span class="accent">pentru Viața Ta</span>
+      </h1>
+      <p class="hero-sub">Kinetoterapie, masaj terapeutic și recuperare fizică cu plan personalizat 1 la 1. Terapeut Lucian Nae — specializat în traumatologie și dezvoltare motrică.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/40766410897?text=Bun%C4%83%20ziua%2C%20doresc%20o%20programare%20la%20KinetoFix%20Bucure%C8%99ti" target="_blank" class="btn-whatsapp">
+          <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Programează-te pe WhatsApp
+        </a>
+        <a href="#servicii" class="btn-outline">
+          Descoperă Serviciile
+          <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:white;stroke-width:2"><path d="M19 9l-7 7-7-7"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:#f472b6;stroke-width:2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div><div class="stat-val">100+</div><div class="stat-lbl">Pacienți tratați</div></div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#f472b6"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div><div class="stat-val">5★</div><div class="stat-lbl">Recenzii Google</div></div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:#f472b6;stroke-width:2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div><div class="stat-val">10+</div><div class="stat-lbl">Ani experiență</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Derulează</span>
+    <svg class="bounce" viewBox="0 0 24 24" style="width:20px;height:20px;fill:none;stroke:rgba(255,255,255,0.6);stroke-width:2"><path d="M19 9l-7 7-7-7"/></svg>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="servicii">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Serviciile Noastre</span>
+      <h2 class="section-title">Recuperare <span class="gradient-brand-text">Personalizată</span></h2>
+      <div class="section-divider" style="width:80px;margin:1rem auto"></div>
+      <p class="section-sub">Fiecare pacient primește un plan unic de recuperare, adaptat nevoilor și obiectivelor sale.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/sports-recovery-DEQWi3heofZiynqJ5bR7GS.webp" alt="Kinetoterapie Sportivă" loading="lazy" />
+          <div class="service-overlay" style="background:linear-gradient(to top, #7c3aed, #5b21b6)"></div>
+          <span class="service-tag">Recuperare pentru Sportivi</span>
+        </div>
+        <div class="service-body">
+          <h3>Kinetoterapie Sportivă</h3>
+          <p>Programe specializate de recuperare pentru sportivi de performanță și amatori, de toate vârstele. Recuperare post-traumatică, prevenție și optimizarea performanței fizice cu plan personalizat 1 la 1.</p>
+          <div class="service-tags"><span>Recuperare post-traumatică</span><span>Sportivi amatori</span><span>Sportivi de performanță</span></div>
+          <a href="https://wa.me/40766410897?text=Bun%C4%83%20ziua%2C%20sunt%20interesat%20de%20Kinetoterapie%20Sportiv%C4%83" target="_blank" class="btn-primary gradient-brand" style="width:100%;justify-content:center">Lasă un mesaj pe WhatsApp</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/baby-kinetofix-k6duPgDKYxxGifGB8biQQx.webp" alt="Kinetoterapie Pediatrică" loading="lazy" />
+          <div class="service-overlay" style="background:linear-gradient(to top, #db2777, #be185d)"></div>
+          <span class="service-tag">Îngrijire pentru Bebeluși</span>
+        </div>
+        <div class="service-body">
+          <h3>Kinetoterapie Pediatrică</h3>
+          <p>Kinetoterapie blândă și eficientă pentru bebeluși cu diferite afecțiuni sau în scop profilactic. Stimulare neuro-motorie, dezvoltare armonioasă și suport pentru părinți în fiecare etapă.</p>
+          <div class="service-tags"><span>Bebeluși 0-3 ani</span><span>Dezvoltare neuro-motorie</span><span>Scop profilactic</span></div>
+          <a href="https://wa.me/40766410897?text=Bun%C4%83%20ziua%2C%20sunt%20interesat%20de%20Kinetoterapie%20Pediatric%C4%83" target="_blank" class="btn-primary" style="width:100%;justify-content:center;background:linear-gradient(135deg,#ec4899,#db2777)">Lasă un mesaj pe WhatsApp</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/massage-therapy-j8pAaAovfdYT5s2EEhgtxH.webp" alt="Masaj Terapeutic" loading="lazy" />
+          <div class="service-overlay" style="background:linear-gradient(to top, #5b21b6, #4c1d95)"></div>
+          <span class="service-tag">Recuperare și Relaxare</span>
+        </div>
+        <div class="service-body">
+          <h3>Masaj Terapeutic & Relaxare</h3>
+          <p>Masaj de recuperare și relaxare adaptat nevoilor fiecărui pacient. Tehnici profesionale pentru reducerea durerilor musculare, îmbunătățirea circulației și refacerea după efort.</p>
+          <div class="service-tags"><span>Masaj de recuperare</span><span>Masaj de relaxare</span><span>Drenaj limfatic</span></div>
+          <a href="https://wa.me/40766410897?text=Bun%C4%83%20ziua%2C%20sunt%20interesat%20de%20Masaj%20Terapeutic" target="_blank" class="btn-primary" style="width:100%;justify-content:center;background:linear-gradient(135deg,#7c3aed,#5b21b6)">Lasă un mesaj pe WhatsApp</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/office-kinetofix-Zm5DYR97qbgv8Xi7hkS5Eb.webp" alt="Kinetoterapie Birou" loading="lazy" />
+          <div class="service-overlay" style="background:linear-gradient(to top, #c026d3, #a21caf)"></div>
+          <span class="service-tag">Soluții pentru Stilul de Viață Sedentar</span>
+        </div>
+        <div class="service-body">
+          <h3>Munca de Birou & Obezitate</h3>
+          <p>Programe dedicate persoanelor cu muncă de birou care suferă de dureri cervicale, lombare sau de postură. De asemenea, programe personalizate pentru obezitate și sedentarism.</p>
+          <div class="service-tags"><span>Dureri de birou</span><span>Corectare postură</span><span>Obezitate & sedentarism</span></div>
+          <a href="https://wa.me/40766410897?text=Bun%C4%83%20ziua%2C%20sunt%20interesat%20de%20Kinetoterapie%20Birou" target="_blank" class="btn-primary" style="width:100%;justify-content:center;background:linear-gradient(135deg,#c026d3,#db2777)">Lasă un mesaj pe WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="services-cta">
+      <a href="https://wa.me/40766410897?text=Bun%C4%83%20ziua%2C%20doresc%20o%20consulta%C8%9Bie%20gratuit%C4%83" target="_blank" class="btn-primary gradient-brand" style="font-size:1rem;padding:1rem 2.5rem;border-radius:9999px;box-shadow:0 8px 24px rgba(124,58,237,0.3)">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Lasă un mesaj pe WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="despre">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/hero-kinetofix-Q7qpGmY2LCsuckhJyhBMV3.webp" alt="Terapeut Lucian Nae — KinetoFix București" loading="lazy" />
+        <div class="about-img-overlay"></div>
+        <div class="about-badge">
+          <div class="about-avatar">LN</div>
+          <div>
+            <div class="about-badge-name">Nae Lucian</div>
+            <div class="about-badge-role">Kinetoterapeut Specialist</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-tag">Despre Noi</span>
+        <h2>Kineto Fix București — <span class="gradient-brand-text">Mișcarea Potrivită</span></h2>
+        <div class="section-divider" style="width:80px;margin:1rem 0"></div>
+        <p>Fondator și terapeut al Kineto Fix București, Lucian Nae vine cu o abordare personalizată și dedicată fiecărui pacient. Cu specializare în traumatologie, dezvoltare motrică și integrarea programelor de recuperare.</p>
+        <p>Fiecare pacient beneficiază de un program unic, creat special pentru nevoile sale, cu monitorizare continuă și ajustări pe parcurs.</p>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+            <h4>Plan Personalizat</h4>
+            <p>Program unic pentru fiecare pacient</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <h4>Îngrijire Dedicată</h4>
+            <p>Sesiuni 1 la 1 pentru atenție completă</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <h4>Recuperare Eficientă</h4>
+            <p>Tehnici moderne și dovedite</p>
+          </div>
+        </div>
+        <div class="specs-title">Specializări</div>
+        <div class="specs-grid">
+          <div class="spec-item"><div class="spec-dot"></div>Recuperare în traumatologie sportivă</div>
+          <div class="spec-item"><div class="spec-dot"></div>Kinetoterapie bebeluși</div>
+          <div class="spec-item"><div class="spec-dot"></div>Kinetoterapie în patologia obezității</div>
+          <div class="spec-item"><div class="spec-dot"></div>Dezvoltare motrică copii și bebeluși</div>
+          <div class="spec-item"><div class="spec-dot"></div>Kinetoterapie tulburări de postură</div>
+          <div class="spec-item"><div class="spec-dot"></div>Masaj recuperare și relaxare</div>
+          <div class="spec-item"><div class="spec-dot"></div>Integrarea programelor personalizate pentru copii și adulți</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="preturi">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Tarife & Pachete</span>
+      <h2 class="section-title">Investiție în <span class="gradient-brand-text">Sănătatea Ta</span></h2>
+      <div class="section-divider" style="width:80px;margin:1rem auto"></div>
+      <p class="section-sub">Pachete flexibile adaptate nevoilor și bugetului fiecărui pacient.</p>
+    </div>
+    <div class="pricing-grid">
+      <!-- Sedinta Unica -->
+      <div class="pricing-card">
+        <div class="pricing-header" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">
+          <div class="pricing-icon" style="background:rgba(255,255,255,0.2)">
+            <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div class="pricing-name" style="color:#fff">Ședință Unică</div>
+          <div class="pricing-subtitle" style="color:rgba(255,255,255,0.7)">Evaluare & Tratament</div>
+          <div style="display:flex;align-items:flex-end;gap:0.5rem">
+            <span class="pricing-price" style="color:#fff">250</span>
+            <span class="pricing-unit" style="color:rgba(255,255,255,0.7);margin-bottom:0.5rem">lei / ședință</span>
+          </div>
+        </div>
+        <div class="pricing-body">
+          <ul class="pricing-features">
+            <li><div class="check-icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Evaluare inițială completă</li>
+            <li><div class="check-icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Ședință de kinetoterapie 45 min</li>
+            <li><div class="check-icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Plan de exerciții pentru acasă</li>
+            <li><div class="check-icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Consultație personalizată</li>
+          </ul>
+          <a href="https://wa.me/40766410897?text=Bun%C4%83%20ziua%2C%20sunt%20interesat%20de%20o%20%C8%98edin%C8%9B%C4%83%20Unic%C4%83" target="_blank" class="pricing-cta" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">
+            <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Programează o ședință
+          </a>
+        </div>
+      </div>
+      <!-- Pachet 8 -->
+      <div class="pricing-card popular">
+        <div class="pricing-header gradient-brand">
+          <div class="pricing-icon" style="background:rgba(255,255,255,0.2)">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="pricing-name" style="color:#fff">Pachet 8 Ședințe</div>
+          <div class="pricing-subtitle" style="color:rgba(255,255,255,0.7)">Recuperare Completă</div>
+          <div style="display:flex;align-items:flex-end;gap:0.5rem">
+            <span class="pricing-price" style="color:#fff">1500</span>
+            <span class="pricing-unit" style="color:rgba(255,255,255,0.7);margin-bottom:0.5rem">lei / pachet</span>
+          </div>
+        </div>
+        <div class="pricing-body">
+          <ul class="pricing-features">
+            <li><div class="check-icon gradient-brand"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Evaluare inițială detaliată</li>
+            <li><div class="check-icon gradient-brand"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>8 ședințe de kinetoterapie 45 min</li>
+            <li><div class="check-icon gradient-brand"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Plan personalizat de recuperare</li>
+          </ul>
+          <a href="https://wa.me/40766410897?text=Bun%C4%83%20ziua%2C%20sunt%20interesat%20de%20Pachetul%208%20%C8%98edin%C8%9Be" target="_blank" class="pricing-cta gradient-brand">
+            <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Cel mai ales pachet
+          </a>
+        </div>
+      </div>
+      <!-- Pachet 4 -->
+      <div class="pricing-card">
+        <div class="pricing-header" style="background:linear-gradient(135deg,#c026d3,#db2777)">
+          <div class="pricing-icon" style="background:rgba(255,255,255,0.2)">
+            <svg viewBox="0 0 24 24"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/></svg>
+          </div>
+          <div class="pricing-name" style="color:#fff">Pachet 4 Ședințe</div>
+          <div class="pricing-subtitle" style="color:rgba(255,255,255,0.7)">Start Recuperare</div>
+          <div style="display:flex;align-items:flex-end;gap:0.5rem">
+            <span class="pricing-price" style="color:#fff">850</span>
+            <span class="pricing-unit" style="color:rgba(255,255,255,0.7);margin-bottom:0.5rem">lei / pachet</span>
+          </div>
+        </div>
+        <div class="pricing-body">
+          <ul class="pricing-features">
+            <li><div class="check-icon" style="background:linear-gradient(135deg,#c026d3,#db2777)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>4 ședințe de kinetoterapie 45 min</li>
+            <li><div class="check-icon" style="background:linear-gradient(135deg,#c026d3,#db2777)"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Plan personalizat de recuperare</li>
+          </ul>
+          <a href="https://wa.me/40766410897?text=Bun%C4%83%20ziua%2C%20sunt%20interesat%20de%20Pachetul%204%20%C8%98edin%C8%9Be" target="_blank" class="pricing-cta" style="background:linear-gradient(135deg,#c026d3,#db2777)">
+            <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Programează pachetul
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Special Services -->
+    <div class="special-table">
+      <div class="special-table-inner">
+        <div class="special-row"><div class="special-name"><div class="special-dot"></div>Kinetoterapie 45 minute</div><span class="special-price">250 lei</span></div>
+        <div class="special-row"><div class="special-name"><div class="special-dot"></div>Masaj recuperare și relaxare</div><span class="special-price">120 lei</span></div>
+        <div class="special-row"><div class="special-name"><div class="special-dot"></div>Evaluare posturală</div><span class="special-price">80 lei</span></div>
+        <div class="special-row"><div class="special-name"><div class="special-dot"></div>Ședință de grup (părinte-copil / frați)</div><span class="special-price">80 lei / pers.</span></div>
+      </div>
+      <p class="pricing-note">* Prețurile pot varia în funcție de complexitatea cazului. Contactați-ne pentru o evaluare personalizată.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimoniale">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Testimoniale</span>
+      <h2 class="section-title">Poveștile <span class="gradient-brand-text">Pacienților Noștri</span></h2>
+      <div class="section-divider" style="width:80px;margin:1rem auto"></div>
+      <p class="section-sub">Peste 100 de pacienți mulțumiți. Iată câteva dintre poveștile lor de recuperare.</p>
+    </div>
+    <div class="rating-row">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <span class="rating-score">5.0</span>
+      <span class="rating-count">100+ recenzii</span>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="test-stars">⭐⭐⭐⭐⭐</div>
+        <p class="test-text">"Am venit la Kineto Fix București după o ruptură de ligamente la genunchi. Terapeutul Lucian mi-a creat un plan de recuperare complet personalizat și în 8 săptămâni m-am întors pe teren. Profesionalism desăvârșit și o atenție deosebită la fiecare detaliu. Recomand cu toată încrederea!"</p>
+        <div class="test-author"><div class="test-avatar">AM</div><div><div class="test-name">Alexandru M.</div><div class="test-role">Fotbalist amator</div></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="test-stars">⭐⭐⭐⭐⭐</div>
+        <p class="test-text">"Bebelușul meu de 4 luni a beneficiat de ședințe de kinetoterapie pediatrică la Kineto Fix București. Lucian este extrem de blând, răbdător și profesionist. Am văzut progrese vizibile după primele 3 ședințe. Un cabinet de excepție pentru cei mici!"</p>
+        <div class="test-author"><div class="test-avatar">MP</div><div><div class="test-name">Maria P.</div><div class="test-role">Mamă</div></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="test-stars">⭐⭐⭐⭐⭐</div>
+        <p class="test-text">"Stăteam 10 ore pe zi la calculator și durerile de spate și gât deveniseră insuportabile. După ședințele la Kineto Fix București, durerea a dispărut complet. Am primit și exerciții pentru acasă, perfect adaptate programului meu. Investiție excelentă în sănătate!"</p>
+        <div class="test-author"><div class="test-avatar">CI</div><div><div class="test-name">Cristian I.</div><div class="test-role">Programator</div></div></div>
+      </div>
+    </div>
+    <div class="test-cta">
+      <a href="https://wa.me/40766410897?text=Bun%C4%83%20ziua%2C%20doresc%20o%20programare" target="_blank" class="btn-primary gradient-brand" style="font-size:1rem;padding:1rem 2.5rem;border-radius:9999px;box-shadow:0 8px 24px rgba(124,58,237,0.3)">Programează-te acum</a>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="galerie">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Galerie</span>
+      <h2 class="section-title">Spațiul <span class="gradient-brand-text">KinetoFix</span></h2>
+      <div class="section-divider" style="width:80px;margin:1rem auto"></div>
+      <p class="section-sub">Descoperă spațiul și atmosfera de la Kineto Fix București.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/gallery-cabinet-1-Wr7YmfJWdFxqjnqFpBXFGQ.webp" alt="Cabinet KinetoFix" loading="lazy" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/gallery-equipment-1-bMkHYbQjJEXHDGKwR7Fqwf.webp" alt="Echipamente KinetoFix" loading="lazy" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/gallery-therapy-1-fmXCfJqLXrxWBMRHMGJFJX.webp" alt="Terapie KinetoFix" loading="lazy" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/gallery-baby-therapy-Wr7YmfJWdFxqjnqFpBXFGQ.webp" alt="Kinetoterapie Pediatrică" loading="lazy" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/gallery-sports-rehab-bMkHYbQjJEXHDGKwR7Fqwf.webp" alt="Recuperare Sportivă" loading="lazy" />
+        <div class="gallery-item-overlay"></div>
+      </div>
+      <div class="gallery-item" style="background:#1a0533;display:flex;align-items:center;justify-content:center;min-height:200px;border-radius:1rem">
+        <a href="https://www.instagram.com/kinetofixbucuresti/" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:#e879f9;font-family:'Raleway',sans-serif;font-weight:800;font-size:0.9rem">
+          <svg viewBox="0 0 24 24" style="width:40px;height:40px;fill:none;stroke:#e879f9;stroke-width:1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          @kinetofixbucuresti
+        </a>
+      </div>
+    </div>
+    <div class="gallery-instagram-cta">
+      <a href="https://www.instagram.com/kinetofixbucuresti/" target="_blank" class="btn-instagram">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:white;stroke-width:1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        Vezi mai mult pe Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Instagram -->
+<section id="instagram">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Instagram</span>
+      <h2 class="section-title">Urmărește-ne pe <span class="gradient-brand-text">Instagram</span></h2>
+      <div class="section-divider" style="width:80px;margin:1rem auto"></div>
+      <p class="section-sub">Exerciții, sfaturi de sănătate, povești de succes și noutăți din cabinetul Kineto Fix București</p>
+    </div>
+    <div class="instagram-grid">
+      <div class="insta-item"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/sports-recovery-DEQWi3heofZiynqJ5bR7GS.webp" alt="Instagram KinetoFix" loading="lazy" /><div class="insta-overlay"><svg class="insta-icon" viewBox="0 0 24 24" style="width:32px;height:32px;fill:none;stroke:white;stroke-width:1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="insta-item"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/baby-kinetofix-k6duPgDKYxxGifGB8biQQx.webp" alt="Instagram KinetoFix" loading="lazy" /><div class="insta-overlay"><svg class="insta-icon" viewBox="0 0 24 24" style="width:32px;height:32px;fill:none;stroke:white;stroke-width:1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="insta-item"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/massage-therapy-j8pAaAovfdYT5s2EEhgtxH.webp" alt="Instagram KinetoFix" loading="lazy" /><div class="insta-overlay"><svg class="insta-icon" viewBox="0 0 24 24" style="width:32px;height:32px;fill:none;stroke:white;stroke-width:1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="insta-item"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/office-kinetofix-Zm5DYR97qbgv8Xi7hkS5Eb.webp" alt="Instagram KinetoFix" loading="lazy" /><div class="insta-overlay"><svg class="insta-icon" viewBox="0 0 24 24" style="width:32px;height:32px;fill:none;stroke:white;stroke-width:1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="insta-item"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/hero-kinetofix-Q7qpGmY2LCsuckhJyhBMV3.webp" alt="Instagram KinetoFix" loading="lazy" /><div class="insta-overlay"><svg class="insta-icon" viewBox="0 0 24 24" style="width:32px;height:32px;fill:none;stroke:white;stroke-width:1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="insta-item" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);display:flex;align-items:center;justify-content:center">
+        <a href="https://www.instagram.com/kinetofixbucuresti/" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:#fff;font-family:'Raleway',sans-serif;font-weight:800;font-size:0.8rem;text-align:center;padding:1rem">
+          <svg viewBox="0 0 24 24" style="width:32px;height:32px;fill:none;stroke:white;stroke-width:1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          @kinetofixbucuresti
+        </a>
+      </div>
+    </div>
+    <div class="insta-cta">
+      <a href="https://www.instagram.com/kinetofixbucuresti/" target="_blank" class="btn-instagram">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:white;stroke-width:1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        Urmărește @kinetofixbucuresti
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Contact & Programări</span>
+      <h2 class="section-title">Programează-te <span class="gradient-brand-text">Astăzi</span></h2>
+      <div class="section-divider" style="width:80px;margin:1rem auto"></div>
+      <p class="section-sub">Primul pas spre recuperare este la un mesaj distanță.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Informații Cabinet</h3>
+        <p>Suntem aici pentru tine, Luni–Vineri, 08:30–20:00.</p>
+        <div class="contact-items">
+          <a href="tel:0766410897" class="contact-item" style="text-decoration:none">
+            <div class="contact-item-icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div><div class="contact-item-label">Telefon / WhatsApp</div><div class="contact-item-value">0766 410 897</div></div>
+          </a>
+          <div class="contact-item">
+            <div class="contact-item-icon" style="background:linear-gradient(135deg,#c026d3,#db2777)">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div><div class="contact-item-label">Adresă</div><div class="contact-item-value">Aleea Mizil, Nr. 59-61, Sectorul 3, București</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon" style="background:linear-gradient(135deg,#7c3aed,#c026d3)">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div><div class="contact-item-label">Program</div><div class="contact-item-value">Luni–Vineri: 08:30–20:00</div></div>
+          </div>
+        </div>
+        <div class="contact-social">
+          <a href="https://www.instagram.com/kinetofixbucuresti/" target="_blank" class="social-btn" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)">
+            <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:none;stroke:white;stroke-width:1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/40766410897" target="_blank" class="social-btn" style="background:linear-gradient(135deg,#25D366,#128C7E)">
+            <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+        <!-- Map -->
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.5!2d26.1502!3d44.4268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAleea%20Mizil%2059-61%2C%20Sector%203%2C%20Bucure%C8%99ti!5e0!3m2!1sro!2sro!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Trimite o Cerere de Programare</h3>
+        <p>Completează formularul și te vom contacta pe WhatsApp pentru confirmare.</p>
+        <form id="contactForm" onsubmit="submitForm(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Nume complet *</label>
+              <input type="text" id="fname" placeholder="Ion Popescu" required />
+            </div>
+            <div class="form-group">
+              <label>Număr de telefon *</label>
+              <input type="tel" id="fphone" placeholder="07XX XXX XXX" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Serviciu dorit</label>
+            <select id="fservice">
+              <option value="">Selectează un serviciu</option>
+              <option>Kinetoterapie Sportivă</option>
+              <option>Kinetoterapie Pediatrică (Bebeluși)</option>
+              <option>Masaj Terapeutic & Relaxare</option>
+              <option>Kinetoterapie Birou & Obezitate</option>
+              <option>Evaluare posturală</option>
+              <option>Altul</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Mesaj / Detalii</label>
+            <textarea id="fmessage" rows="3" placeholder="Descrie pe scurt problema sau întrebarea ta..."></textarea>
+          </div>
+          <button type="submit" class="form-submit gradient-brand">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Trimite pe WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663471137141/DPkLkqFSoZh5RdahBsdYCW/kinetofix-logo_fba9468e.png" alt="KinetoFix București" />
+        <p>Cabinet de kinetoterapie și recuperare fizică în București, Sectorul 3. Terapeut Lucian Nae — plan personalizat 1 la 1.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/kinetofixbucuresti/" target="_blank" title="Instagram">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:rgba(255,255,255,0.7);stroke-width:1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/40766410897" target="_blank" title="WhatsApp">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:rgba(255,255,255,0.7)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Servicii</h4>
+        <ul>
+          <li><a href="#servicii">Kinetoterapie Sportivă</a></li>
+          <li><a href="#servicii">Kinetoterapie Pediatrică</a></li>
+          <li><a href="#servicii">Masaj Terapeutic</a></li>
+          <li><a href="#servicii">Kinetoterapie Birou</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Navigare</h4>
+        <ul>
+          <li><a href="#acasa">Acasă</a></li>
+          <li><a href="#despre">Despre Noi</a></li>
+          <li><a href="#preturi">Prețuri</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#articole">Articole</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 KinetoFix București — Mișcarea Potrivită. Toate drepturile rezervate.</span>
+      <span class="footer-copy">Aleea Mizil 59-61, Sector 3, București · 0766 410 897</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 50) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  // Mobile menu
+  function openMobileMenu() { document.getElementById('mobileMenu').classList.add('open'); }
+  function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+  // Form submit → WhatsApp
+  function submitForm(e) {
+    e.preventDefault();
+    const name = document.getElementById('fname').value;
+    const phone = document.getElementById('fphone').value;
+    const service = document.getElementById('fservice').value;
+    const message = document.getElementById('fmessage').value;
+    const text = encodeURIComponent(
+      `Bună ziua! Mă numesc ${name}.\nTelefon: ${phone}\nServiciu dorit: ${service || '—'}\nMesaj: ${message || '—'}\n\nDoresc să mă programez la KinetoFix București.`
+    );
+    window.open(`https://wa.me/40766410897?text=${text}`, '_blank');
+    document.getElementById('contactForm').reset();
+    alert('Cererea a fost trimisă! Veți fi contactat pe WhatsApp în cel mai scurt timp.');
+  }
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>
